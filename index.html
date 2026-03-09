@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pinch – Waiting List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="brand">
+        <img
+          src="assets/logo.svg"
+          alt="Pinch"
+          class="brand-logo"
+        />
+      </header>
+
+      <section class="card">
+        <div class="card-header">
+          <h1>Join the Pinch waiting list</h1>
+        </div>
+
+        <div class="segmented-control" role="tablist">
+          <button
+            class="segment is-active"
+            type="button"
+            data-segment="homecooks"
+            role="tab"
+            aria-selected="true"
+          >
+            For homecooks
+          </button>
+          <button
+            class="segment"
+            type="button"
+            data-segment="chefs"
+            role="tab"
+            aria-selected="false"
+          >
+            For collaborators
+          </button>
+        </div>
+
+        <div class="panel is-active" data-panel="homecooks">
+          <p>
+            Discover curated recipes, step‑by‑step guidance, and ideas from real chefs.
+          </p>
+          <form class="waitlist-form" data-role="homecook">
+            <label class="field">
+              <span class="field-label">Email address</span>
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="you@example.com"
+                autocomplete="email"
+              />
+            </label>
+            <button class="button-primary" type="submit">
+              Join as a homecook
+            </button>
+          </form>
+        </div>
+
+        <div class="panel" data-panel="chefs">
+          <p>
+            Share your recipes, grow your audience, and collaborate with Pinch.
+          </p>
+          <form class="waitlist-form" data-role="chef">
+            <label class="field">
+              <span class="field-label">Email address</span>
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="you@restaurant.com"
+                autocomplete="email"
+              />
+            </label>
+            <button class="button-primary" type="submit">
+              Join as a collaborator
+            </button>
+          </form>
+        </div>
+
+        <p class="helper-text">
+          We’ll only use your email to contact you about early access to Pinch.
+        </p>
+      </section>
+
+      <footer class="page-footer">
+        <small>&copy; <span id="year"></span> Pinch</small>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
